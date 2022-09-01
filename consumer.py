@@ -11,7 +11,6 @@ group_id = 'cons'
 
 consumer = KafkaConsumer(TOPIC_NAME, bootstrap_servers=KAFKA_HOST + ":" + KAFKA_PORT,
                                     group_id = group_id,
-                                    #consumer_timeout_ms=60000,
                                     auto_offset_reset='earliest',
                                     enable_auto_commit=False)
                                     #value_deserializer=lambda x: x.encode('utf-8'))
@@ -29,11 +28,6 @@ def main():
             for message in messages:
                 number = message.value.decode('utf-8')
                 offset = message.offset
-                #for message in consumer:
-        #    number = message.value.decode('utf-8')
-
-        #print(number)
-        #print(offset)
 
         consumer.assign([tp1])
         _ = consumer.poll(1000, max_records=1)

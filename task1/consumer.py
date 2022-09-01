@@ -37,11 +37,9 @@ def main():
                 value = message.value.decode('utf-8')
 
         pair = str(number)+": "+ value
-        #sample = str(number)
         print(pair)
         with open('result.txt', 'a') as fp:
             fp.write(number +": "+ value+ '\n')
-            #fp.write(number +": "+'\n')
 
         consumer.commit({
             tp0: OffsetAndMetadata(offset+1, None)

@@ -29,21 +29,12 @@ def main():
             for message in messages:
                 number = message.value.decode('utf-8')
                 offset = message.offset
-                #for message in consumer:
-        #    number = message.value.decode('utf-8')
-
-        #print(number)
-        #print(offset)
 
         consumer.assign([tp1])
         _ = consumer.poll(1000, max_records=1)
         for tp1, messages in _.items():
             for message in messages:
                 value = message.value.decode('utf-8')
-                #offset = message.offset
-
-        # my_consumer.seek(1, key_position)
-        # my_consumer.consumer.commit()
 
         pair = str(number)+": "+ value
         #sample = str(number)

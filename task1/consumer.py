@@ -24,7 +24,6 @@ def main():
     while True:
         consumer.assign([tp0])
         _ = consumer.poll(1000, max_records=1)
-        number = ""
         for tp0, messages in _.items():
             for message in messages:
                 number = message.value.decode('utf-8')

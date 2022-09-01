@@ -36,7 +36,7 @@ myRecordBuilder.set("endDdate1", "Operation1")....
  В ходе этого решения также возникли сложности:
  
  **1.** Для использования библиотеки требовалось задать зависимости в `gradle/sbt/maven` (блок `Using avro4s in your project` [доки](https://github.com/sksamuel/avro4s)). 
- Несмотря на успешную компиляцию maven (картинка ниже), система все равно не видела библиотеку (картинка ниже), аналогично с gradle.
+ Несмотря на успешную компиляцию `maven` (картинка ниже), система все равно не видела библиотеку (картинка ниже), аналогично с `gradle`.
  `pom.xml` файл `maven` и `build.gradle` файл `gradle` приложены в папке.
  
  ![maven1](https://github.com/nbalol33/TestSberbank/blob/main/task3/maven_compile_start.png) 

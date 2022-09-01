@@ -34,10 +34,6 @@ def main():
         for tp1, messages in _.items():
             for message in messages:
                 value = message.value.decode('utf-8')
-                #offset = message.offset
-
-        # my_consumer.seek(1, key_position)
-        # my_consumer.consumer.commit()
 
         pair = str(number)+": "+ value
         #sample = str(number)

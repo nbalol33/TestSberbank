@@ -1,4 +1,5 @@
 #!/bin/bash
-
+```bash
 cat log.txt | grep -oP 'UCP_PARALLELRUN:[^,]+' | sort -t: -k1,1 | sort -u | sed 's/^/disable /'
+```
 

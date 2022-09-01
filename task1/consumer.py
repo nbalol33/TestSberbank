@@ -20,6 +20,7 @@ def main():
     tp0 = TopicPartition(TOPIC_NAME, 0)
     tp1 = TopicPartition(TOPIC_NAME, 1)
     consumer.unsubscribe() #без этого вылезает ошибка IllegalStateError
+    
     while True:
         consumer.assign([tp0])
         _ = consumer.poll(1000, max_records=1)

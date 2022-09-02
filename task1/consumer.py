@@ -37,8 +37,8 @@ def main():
 
         pair = str(number)+": "+ value
         print(pair)
-        with open('result.txt', 'a') as fp:
-            fp.write(number +": "+ value+ '\n')
+        with open('result.txt', 'a') as f:
+            f.write(number +": "+ value+ '\n')
 
         consumer.commit({
             tp0: OffsetAndMetadata(offset+1, None)

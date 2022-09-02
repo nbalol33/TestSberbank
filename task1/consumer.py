@@ -1,7 +1,6 @@
 from kafka import KafkaConsumer
 from kafka.structs import TopicPartition
 from kafka.structs import OffsetAndMetadata
-import json
 
 TOPIC_NAME = "taskS1"
 # Kafka server

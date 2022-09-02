@@ -1,7 +1,6 @@
 from kafka import KafkaProducer
 from time import sleep
 import random
-import string
 
 # Kafka topic name
 TOPIC_NAME = "taskS1"

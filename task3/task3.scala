@@ -19,12 +19,12 @@ for (w <- 99999)
 {   
     val stringF = Iterator.continually(Random.nextPrintableChar()).filter(_.isLetterOrDigit).take(5).mkString
     val stringS = Iterator.continually(Random.nextPrintableChar()).filter(_.isLetterOrDigit).take(5).mkString
-    if r.nextInt(40) < 10:
+    if r.nextInt(10) < 5:
         val values = TestAvroEntry(stringF, stringS)
         //val values = TestAvroEntry("my_EndDate1", Seq(CollectionOperation("op_type1")))
-    else if r.nextInt(40) < 20:
+    else if r.nextInt(10) < 5:
         val values = TestAvroEntry(null, stringS)
-    else if r.nextInt(40) < 30:
+    else if r.nextInt(10) < 5:
         val values = TestAvroEntry(stringF, null)
     else
         val values = TestAvroEntry(null, null)     
